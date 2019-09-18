@@ -31,7 +31,7 @@ module.exports = homebridge => {
       pa.category = Accessory.Categories.WINDOW
       pa.context.mode = 'roller'
 
-      const coveringService = new Service.WindowCovering()
+      const coveringService = new Service.Window()
         .setCharacteristic(
           Characteristic.PositionState,
           positionStates.get(this.device.rollerState)
