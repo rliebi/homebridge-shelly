@@ -56,7 +56,7 @@ module.exports = homebridge => {
       const d = this.device
 
       this.platformAccessory
-        .getService(Service.WindowCovering)
+        .getService(Service.Window)
         .getCharacteristic(Characteristic.TargetPosition)
         .on('set', async (newValue, callback) => {
           if (newValue === this.targetPosition) {
@@ -102,7 +102,7 @@ module.exports = homebridge => {
       )
 
       this.platformAccessory
-        .getService(Service.WindowCovering)
+        .getService(Service.Window)
         .getCharacteristic(Characteristic.PositionState)
         .setValue(positionStates.get(newValue))
 
@@ -119,7 +119,7 @@ module.exports = homebridge => {
       )
 
       this.platformAccessory
-        .getService(Service.WindowCovering)
+        .getService(Service.Window)
         .getCharacteristic(Characteristic.CurrentPosition)
         .setValue(newValue)
 
@@ -161,7 +161,7 @@ module.exports = homebridge => {
           this.targetPosition = targetPosition
 
           this.platformAccessory
-            .getService(Service.WindowCovering)
+            .getService(Service.Window)
             .getCharacteristic(Characteristic.TargetPosition)
             .setValue(targetPosition)
         }
