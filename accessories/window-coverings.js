@@ -28,7 +28,7 @@ module.exports = homebridge => {
     createPlatformAccessory() {
       const pa = super.createPlatformAccessory()
 
-      pa.category = Accessory.Categories.WINDOW_COVERING
+      pa.category = Accessory.Categories.WINDOW
       pa.context.mode = 'roller'
 
       const coveringService = new Service.WindowCovering()
